@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { Router, RouterModule, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+// import { Router, RouterModule, NavigationEnd } from '@angular/router';
+// import { filter } from 'rxjs/operators';
 declare var gtag;
 
 @Component({
@@ -11,14 +11,18 @@ declare var gtag;
 
 export class AppComponent {
   title = 'app';
-  constructor(private router:Router){
-    const navEvents = this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    )
-    navEvents.subscribe((event:NavigationEnd)=>{
-      gtag('config', 'UA-122661218-3', {
-        'page_path':event.urlAfterRedirects
-      });      
-    })
+  constructor(){//private router:Router
+     gtag('config', 'UA-122661218-3'//, {
+    //   'page_path':event.urlAfterRedirects
+    // }
+    );
+    // const navEvents = this.router.events.pipe(
+    //   filter(event => event instanceof NavigationEnd)
+    // )
+    // navEvents.subscribe((event:NavigationEnd)=>{
+    //   gtag('config', 'UA-122661218-3', {
+    //     'page_path':event.urlAfterRedirects
+    //   });      
+    // })
   }
 }
