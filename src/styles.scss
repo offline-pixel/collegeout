@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Common SCSS rules
+*, *:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
