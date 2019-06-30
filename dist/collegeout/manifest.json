@@ -1,7 +1,7 @@
 {
-  "name": "collegeout",
+  "name": "",
   "short_name": "collegeout",
-  "theme_color": "#1976d2",
+  "theme_color": "#fafafa",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
