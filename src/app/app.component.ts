@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 // import { Router, RouterModule, NavigationEnd } from '@angular/router';
 // import { filter } from 'rxjs/operators';
 declare var gtag;
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ declare var gtag;
 
 export class AppComponent {
   title = 'app';
-  constructor(){//private router:Router
+  constructor(private swUpdate: SwUpdate){//private router:Router
      gtag('config', 'UA-122661218-3'//, {
     //   'page_path':event.urlAfterRedirects
     // }
@@ -24,5 +25,14 @@ export class AppComponent {
     //     'page_path':event.urlAfterRedirects
     //   });      
     // })
+  }
+  ngOninit(){
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe(() => {
+          if(confirm("New version available. Update now ?")) { 
+              window.location.reload();
+          }
+      });
+    }
   }
 }

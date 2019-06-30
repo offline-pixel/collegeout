@@ -1,0 +1,37 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html",
+        "/*.jpg",
+        "/*.png",
+        "/*.ogg",
+        "/*.eot",
+        "/*.woff",
+        "/*.woff2",
+        "/*.ttf"
+      ],
+      "urls":[
+        "https://fonts.googleapis.com/**",
+        "https://maxcdn.bootstrapcdn.com/**",
+        "https://code.jquery.com/**",
+        "https://cdnjs.cloudflare.com/**",
+        "https://maxcdn.bootstrapcdn.com/**",
+        "https://stackpath.bootstrapcdn.com/**"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
+}
