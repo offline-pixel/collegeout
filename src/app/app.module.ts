@@ -18,6 +18,8 @@ import { BodyComponent } from './home/body/body.component';
 import { FooterComponent } from './home/footer/footer.component';
 
 import { MyngmodulesRoutingModule } from './myngmodules/myngmodules-routing.module';
+import { IonicModule } from '@ionic/angular';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,9 @@ import { MyngmodulesRoutingModule } from './myngmodules/myngmodules-routing.modu
       '/ngsw-worker.js',
       { enabled: environment.production }
     ),
+    IonicModule.forRoot(),
   ],
-  providers: [],
+  providers: [ Camera ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -2,6 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 // import { Router, RouterModule, NavigationEnd } from '@angular/router';
 // import { filter } from 'rxjs/operators';
 declare var gtag;
+declare var device;
+
 import { SwUpdate } from '@angular/service-worker';
 
 @Component({
@@ -27,6 +29,9 @@ export class AppComponent {
     // })
   }
   ngOninit(){
+    document.addEventListener("deviceready", function() { 
+      alert(device.platform); 
+    }, false); 
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(() => {
           if(confirm("New version available. Update now ?")) { 
