@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule }   from '@angular/forms';
 
@@ -45,7 +47,7 @@ import { BrandingComponent } from './home/branding/branding.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MyngmodulesRoutingModule,
+    MyngmodulesRoutingModule,HttpClientModule,HttpModule,
     MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule,
     MatDatepickerModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule,
     MatListModule, MatMenuModule, MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule,

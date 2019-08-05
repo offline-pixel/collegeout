@@ -71,7 +71,7 @@
       <div class="component-shortcode component ">
         <div class="wpcf7" lang="en-US" dir="ltr">
           <div class="screen-reader-response"></div>
-          <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycby3lLMJIXpiTYHlUwZr2DmoSPNYa39c6kWL3gqBKA/exec">
+          <!-- <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycby3lLMJIXpiTYHlUwZr2DmoSPNYa39c6kWL3gqBKA/exec"> -->
             <div class="contact-form component-cf7 component">
               <label>Title</label>
               <span class="wpcf7-form-control-wrap contact-name">
@@ -109,9 +109,16 @@
               <span class="wpcf7-form-control-wrap contact-message">
                 <textarea style="height:150px;" name="message" [(ngModel)]="message" cols="40" rows="30" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"></textarea>
               </span>
-              <input type="submit" value="submit" class="wpcf7-form-control wpcf7-submit cta cta-negative" />
+              <!-- <input type="submit" value="submit" (click)="submit()" class="wpcf7-form-control wpcf7-submit cta cta-negative" /> -->
+              <div style="
+              color: #323232;
+              border: 1px solid #454846;
+              display: inline-block;
+              padding: 12px 32px;cursor:pointer;
+          " (click)="submit()">Submit</div>
+              <!-- <input type="submit" value="submit" (click)="submit()" class="wpcf7-form-control wpcf7-submit cta cta-negative" /> -->
             </div>
-          </form>
+          <!-- </form> -->
         </div>
       </div>
     </section>

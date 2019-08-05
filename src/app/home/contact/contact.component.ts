@@ -1,5 +1,9 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 // import { FORM_DIRECTIVES, FormBuilder, Validators, Control, ControlGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { map } from "rxjs/operators";
+import { Http } from '@angular/http'
+
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +21,7 @@ export class ContactComponent implements OnInit {
   country:any
   message:any
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private http:Http) { }
 
   ngOnInit() {
     this.renderer.removeClass(document.body, 'navOpen')    
@@ -35,13 +39,11 @@ export class ContactComponent implements OnInit {
       country: this.country,
       message: this.message
     }
-    // if ( this.email || !this.email ){
-    //   let pattern:any = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-    //   console.log(pattern.test(this.email))
-    // }
-    // if ( !this.title || !this.fname || !this.lname || !this.cname || !this.email || !this.number || !this.city || !this.country || !this.message ){
-    //   console.log(true)
-    // }
     console.log(temp)
+    this.http.post("/email", temp).pipe(
+      map(r => r.json())
+    ).subscribe(el=>{
+      console.log(el)
+    })
   }
 }
