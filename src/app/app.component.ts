@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 // import { Router, RouterModule, NavigationEnd } from '@angular/router';
 // import { filter } from 'rxjs/operators';
-declare var gtag;
 import { SwUpdate } from '@angular/service-worker';
 
 @Component({
@@ -13,18 +12,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent {
   title = 'app';
   constructor(private swUpdate: SwUpdate){//private router:Router
-     gtag('config', 'UA-122661218-3'//, {
-    //   'page_path':event.urlAfterRedirects
-    // }
-    );
-    // const navEvents = this.router.events.pipe(
-    //   filter(event => event instanceof NavigationEnd)
-    // )
-    // navEvents.subscribe((event:NavigationEnd)=>{
-    //   gtag('config', 'UA-122661218-3', {
-    //     'page_path':event.urlAfterRedirects
-    //   });      
-    // })
+  
   }
   ngOninit(){
     if (this.swUpdate.isEnabled) {

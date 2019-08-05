@@ -1,3 +1,56 @@
-<p>
-  header works!
-</p>
+<div class="breakpoint global"></div>
+<div class="breakpoint phone"></div>
+<div class="breakpoint tablet-portrait"></div>
+<div class="breakpoint tablet-landscape"></div>
+<div class="breakpoint desktop"></div>
+<div class="breakpoint xl"></div>
+<div class="breakpoint xl2"></div>
+<div class="breakpoint-current"></div>
+<div class="svg-sprite no-print"></div>
+<header class="component-header component" data-component-name="Nav">
+  <div class="header-inner">
+    <div class="hamburger-wrapper">
+      <mark class="hamburger"></mark>
+    </div>
+    <a [routerLink]="['/']" class="logo-wrapper">
+      <img src="../../../assets/logo/logo-152x81.png" style="max-width:152px;max-height:81px;" />
+    </a>
+    <nav class="main-nav">
+      <ul class="menu-items">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['about']">About Us</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['services']">Services</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['portfolio']">Portfolio</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['careers']">Careers</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['contact']">Contact</a></li>
+      </ul>
+      <ul class="menu-items mobile-menu-items">
+        <li id="menu-item-3872" class="menu-item menu-item-type-post_type menu-item-object-areas menu-item-has-children "><a [routerLink]="['services']">Expertise</a>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Brand Strategy</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Brand Identity</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Packaging</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Innovation</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Data visualization</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Information architecture</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Usability Testing</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">Content marketing</a></li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children "><a [routerLink]="['services']">Services</a>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">WOW Gifts</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">WOW Interiors</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">WOW Events</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">WOW Branding</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-areas "><a [routerLink]="['services']">WOW Printers & Designers</a></li>
+          </ul>
+        </li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['about']">About Us</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['services']">Services</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['portfolio']">Portfolio</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['careers']">Careers</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a [routerLink]="['contact']">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
